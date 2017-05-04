@@ -1,0 +1,13 @@
+<div class="col-md-offset-3">
+<div class="col-md-6">
+<%= simple_form_for @book do |f| %>
+  <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a cateory") %>
+  <%= f.file_field :book_img%>
+  <%= f.input :title, label: "Movie title" %>
+  <%= f.input :description, label: "Description" %>
+   <%= f.input :author, label: "Director" %>
+
+  <%= f.submit "Create movie", class: "btn btn-primary" %>
+<% end %>
+</div>
+</div>

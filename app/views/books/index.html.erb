@@ -1,0 +1,20 @@
+<div class="index">
+<div class="row">
+
+<%@books.each do |book|%>
+<div class="col-md-3">
+	<a href ="books/<%= book.id%>">
+<%= image_tag book.book_img(:book_show), class: "book"%>
+</a>
+</div>
+<%end%>
+
+</div>
+</div>
+
+<div class="col-md-offset-8 digg_pagination">
+<div class="page_info">
+      <%= page_entries_info @books, :model => 'movie' %>
+      </div>
+<%= will_paginate @books, :container => false%>
+</div>

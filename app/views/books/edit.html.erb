@@ -1,0 +1,12 @@
+<div class="col-md-offset-3">
+<div class="col-md-6">
+<%= simple_form_for @book do |f| %>
+  <%= f.select :category_id, @categories %>
+  <%= f.input :title, label: "Movie title" %>
+  <%= f.input :description, label: "Description" %>
+   <%= f.input :author, label: "Director" %>
+
+  <%= f.submit "Update movie", class: "btn btn-primary" %>
+<% end %>
+</div>
+</div>
